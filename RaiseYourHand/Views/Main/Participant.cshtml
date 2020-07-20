@@ -1,0 +1,19 @@
+﻿@model string
+@{ ViewBag.Title = "Raise your hand!"; }
+
+<div id="inputs" hidden="hidden">
+	<div id="number"></div>
+	<div class="btn-group-vertical btn-group-lg" id="raiseHandButtonGroup">
+		<input type="button" value="Comment! ✋" onclick="comment()" disabled class="btn btn-info" />
+		<input type="button" value="New topic! ☝" onclick="newtopic()" disabled class="btn btn-info" />
+		<input type="button" value="Too much... 😴" onclick="toomuch()" disabled class="btn btn-info" />
+		<input type="button" value="Technical! ⚠" onclick="tech()" disabled class="btn btn-info" />
+		<input type="button" value="Bullshit! 👌" onclick="bullsh()" disabled class="btn btn-info" />
+	</div>
+	<input type="button" id="downHandButton" value="Down your hand!" onclick="downHand()" disabled class="btn btn-danger" />
+</div>
+
+@section Scripts {
+	<script>room = "@this.Model"</script>
+	<script src="~/Scripts/participant.js"></script>
+}
