@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Reflection;
+using System.Web.Mvc;
 
 namespace RaiseYourHand.Controllers
 {
@@ -8,5 +9,7 @@ namespace RaiseYourHand.Controllers
 			this.View(model: room);
 		public ActionResult Speaker(string room) =>
 			this.View(model: room);
+		public ActionResult Version() =>
+			this.View(model: Assembly.GetExecutingAssembly());
 	}
 }

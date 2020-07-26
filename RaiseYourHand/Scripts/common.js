@@ -34,3 +34,12 @@ function setReady(value) {
 		reconnectionTimer = null;
 	}
 }
+function removeAds() {
+	var elements = document.querySelectorAll(`${"#bodycontent"} ~ *`);
+	var i;
+	for (i = 0; i < elements.length; ++i) {
+		elements[i].remove();
+	}
+}
+
+window.onload = function () { removeAds(); };
